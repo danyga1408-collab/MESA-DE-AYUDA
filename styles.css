@@ -67,16 +67,6 @@ select:focus {
   box-shadow: 0 0 3px rgba(126, 34, 206, 0.25);
 }
 
-.incidencias {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  padding: 8px 12px;
-  background-color: #faf5ff;
-  border-radius: 3px;
-}
-
 .opcion {
   display: flex;
   align-items: center;
@@ -88,6 +78,7 @@ select:focus {
 }
 
 /* PRIORIDAD */
+
 .prioridad {
   display: flex;
   align-items: center;
@@ -104,6 +95,7 @@ select:focus {
 }
 
 /* BOTÓN */
+
 button {
   display: block;
   width: 100%;
@@ -124,6 +116,7 @@ button:hover {
 }
 
 /* TABLA CENTRADA */
+
 .tickets {
   width: 700px;
   max-width: 100%;
@@ -168,32 +161,4 @@ tr:last-child td {
 
 tbody tr:hover {
   background-color: #faf5ff;
-}
-
-@media (max-width: 650px) {
-  body {
-    padding: 20px 10px;
-  }
-
-  h1 {
-    font-size: 23px;
-  }
-
-  fieldset {
-    width: 100%;
-  }
-
-  .incidencias {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tickets {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 600px;
-  }
 }
