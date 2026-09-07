@@ -18,20 +18,13 @@ h1 {
   font-weight: 700;
 }
 
-.contenedor {
-  max-width: 700px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px 25px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(91, 33, 182, 0.12);
-}
-
 fieldset {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto 30px auto;
   border: 1px solid #d8b4fe;
   border-radius: 7px;
   padding: 25px 18px 18px 18px;
-  margin-bottom: 30px;
   background-color: #ffffff;
 }
 
@@ -77,7 +70,8 @@ select:focus {
 .incidencias {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
   padding: 8px 12px;
   background-color: #faf5ff;
   border-radius: 3px;
@@ -93,9 +87,11 @@ select:focus {
   white-space: nowrap;
 }
 
+/* PRIORIDAD */
 .prioridad {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   margin-top: 15px;
   font-weight: normal;
@@ -107,7 +103,9 @@ select:focus {
   height: 14px;
 }
 
+/* BOTÓN */
 button {
+  display: block;
   width: 100%;
   margin-top: 15px;
   padding: 10px;
@@ -125,8 +123,10 @@ button:hover {
   background-color: #7e22ce;
 }
 
+/* TABLA CENTRADA */
 .tickets {
-  max-width: 700px;
+  width: 700px;
+  max-width: 100%;
   margin: 30px auto 0 auto;
 }
 
@@ -150,7 +150,7 @@ th {
   background-color: #6b21a8;
   color: white;
   padding: 11px 14px;
-  text-align: left;
+  text-align: center;
   font-size: 13px;
 }
 
@@ -159,6 +159,7 @@ td {
   border-bottom: 1px solid #e9d5ff;
   font-size: 13px;
   color: #5b4b66;
+  text-align: center;
 }
 
 tr:last-child td {
@@ -178,16 +179,17 @@ tbody tr:hover {
     font-size: 23px;
   }
 
-  .contenedor {
-    padding: 20px 15px;
+  fieldset {
+    width: 100%;
   }
 
   .incidencias {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .tickets {
+    width: 100%;
     overflow-x: auto;
   }
 
