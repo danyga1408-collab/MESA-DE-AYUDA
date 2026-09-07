@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mesa de Ayuda - Soporte Técnico</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Mesa de Ayuda - Soporte Técnico</h1>
+
+    <div class="contenedor">
+      <form action="/generar_ticket" method="post">
+        <fieldset>
+          <legend>Datos del Solicitante</legend>
+
+          <label for="nombre"> Nombre Completo: </label>
+
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo"> Correo Institucional: </label>
+
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="sede"> Sede / Municipio: </label>
+
+          <select id="sede" name="sede" required>
+            <option value="">Seleccione la ubicación...</option>
+
+            <option value="Mosquera">Mosquera</option>
+
+            <option value="Facatativá">Facatativá</option>
+
+            <option value="Soacha">Soacha</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles del Requerimiento</legend>
+
+          <label> Tipo de Incidencia: </label>
+
+          <div class="incidencias">
+            <label class="opcion">
+              <input type="radio" name="incidencia" value="Hardware" required />
+
+              Falla de Hardware / Daño Físico
+            </label>
+
+            <label class="opcion">
+              <input type="radio" name="incidencia" value="Software" />
+
+              Falla de Software / Actualización
+            </label>
+          </div>
+
+          <label class="prioridad">
+            <input type="checkbox" name="prioridad" value="ALTA" />
+
+            Marcar como prioridad ALTA
+          </label>
+
+          <button type="submit">Generar Ticket de Soporte</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <section class="tickets">
+      <h2>Tickets Recientes</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket ID</th>
+            <th>Sede</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>#TK-1045</td>
+            <td>Mosquera</td>
+            <td>Software</td>
+            <td>En Revisión</td>
+          </tr>
+
+          <tr>
+            <td>#TK-1046</td>
+            <td>Facatativá</td>
+            <td>Hardware</td>
+            <td>Pendiente Piezas</td>
+          </tr>
+
+          <tr>
+            <td>#TK-1047</td>
+            <td>Soacha</td>
+            <td>Hardware</td>
+            <td>Solucionado</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
